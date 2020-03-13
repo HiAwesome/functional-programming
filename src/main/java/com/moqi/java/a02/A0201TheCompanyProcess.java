@@ -4,7 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
 
-import static com.moqi.Data.NAME_LIST;
+import static com.moqi.java.Data.NAME_LIST;
 
 /**
  * 典型的公司业务处理例子（Java 实现）
