@@ -1,4 +1,4 @@
-package com.moqi.a01;
+package com.moqi.java.a01;
 
 import lombok.extern.slf4j.Slf4j;
 
