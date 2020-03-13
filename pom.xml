@@ -43,6 +43,9 @@
         <!-- scope 本地调试时注销 -->
         <scala.scope>compile</scala.scope>
         <scala-maven-plugin-version>4.3.1</scala-maven-plugin-version>
+
+        <!-- clojure -->
+        <clojure.version>1.10.1</clojure.version>
     </properties>
 
 
@@ -143,6 +146,13 @@
             <artifactId>scala-compiler</artifactId>
             <version>${scala.version}</version>
             <scope>${scala.scope}</scope>
+        </dependency>
+
+        <!-- Clojure -->
+        <dependency>
+            <groupId>org.clojure</groupId>
+            <artifactId>clojure</artifactId>
+            <version>${clojure.version}</version>
         </dependency>
     </dependencies>
 
