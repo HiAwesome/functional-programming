@@ -61,7 +61,6 @@
             <artifactId>groovy-all</artifactId>
             <version>${groovy-all.version}</version>
             <type>pom</type>
-            <scope>${spock.scope}</scope>
         </dependency>
 
         <dependency>
