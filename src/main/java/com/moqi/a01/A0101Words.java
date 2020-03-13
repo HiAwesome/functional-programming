@@ -40,14 +40,14 @@ public class A0101Words {
         log.info("map:{}", map);
     }
 
-    @SuppressWarnings({"SameParameterValue", "Java8MapApi"})
-    private static Map<String, Integer> wordFreq(String words) {
+    private static Map<String, Integer> wordFreq(@SuppressWarnings("SameParameterValue") String words) {
         TreeMap<String, Integer> wordMap = new TreeMap<>();
         Matcher m = Pattern.compile("\\w+").matcher(words);
 
         while (m.find()) {
             String word = m.group().toLowerCase();
             if (!NON_WORDS.contains(word)) {
+                //noinspection Java8MapApi
                 if (wordMap.get(word) == null) {
                     wordMap.put(word, 1);
                 } else {

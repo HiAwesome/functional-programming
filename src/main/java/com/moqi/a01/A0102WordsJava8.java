@@ -48,8 +48,7 @@ public class A0102WordsJava8 {
         return wordList;
     }
 
-    @SuppressWarnings("SameParameterValue")
-    private static Map<String, Integer> wordFreq(String words) {
+    private static Map<String, Integer> wordFreq(@SuppressWarnings("SameParameterValue") String words) {
         TreeMap<String, Integer> wordMap = new TreeMap<>();
         regexToList(words).stream()
                 .map(String::toLowerCase)
