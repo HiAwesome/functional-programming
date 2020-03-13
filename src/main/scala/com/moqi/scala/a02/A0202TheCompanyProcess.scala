@@ -6,7 +6,7 @@ import com.moqi.scala.Data.name_list
  * @author moqi
  *         On 3/13/20 22:40
  */
-object A0201TheCompanyProcess {
+object A0202TheCompanyProcess {
 
   def main(args: Array[String]): Unit = {
     val result = name_list
