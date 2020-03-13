@@ -44,6 +44,7 @@ public class A0101Words {
     private static Map<String, Integer> wordFreq(String words) {
         TreeMap<String, Integer> wordMap = new TreeMap<>();
         Matcher m = Pattern.compile("\\w+").matcher(words);
+
         while (m.find()) {
             String word = m.group().toLowerCase();
             if (!NON_WORDS.contains(word)) {
@@ -54,6 +55,7 @@ public class A0101Words {
                 }
             }
         }
+
         return wordMap;
     }
 
