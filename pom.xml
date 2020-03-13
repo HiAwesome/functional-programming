@@ -37,6 +37,12 @@
         <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
         <maven-assembly-plugin.version>3.0.0</maven-assembly-plugin.version>
         <maven-surefire-plugin.version>3.0.0-M3</maven-surefire-plugin.version>
+
+        <!-- scala -->
+        <scala.version>2.13.1</scala.version>
+        <!-- scope 本地调试时注销 -->
+        <scala.scope>provided</scala.scope>
+        <scala-maven-plugin-version>4.3.1</scala-maven-plugin-version>
     </properties>
 
 
@@ -122,6 +128,22 @@
             <version>${guava.version}</version>
         </dependency>
         <!-- common tool library end -->
+
+        <!-- Scala-Library -->
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>${scala.version}</version>
+            <scope>${scala.scope}</scope>
+        </dependency>
+
+        <!-- Scala-Compiler -->
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-compiler</artifactId>
+            <version>${scala.version}</version>
+            <scope>${scala.scope}</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -193,6 +215,23 @@
                 </dependencies>
             </plugin>
             <!-- spock testing framework build end -->
+
+            <!-- Scala 的编译器插件-->
+            <plugin>
+                <!-- https://mvnrepository.com/artifact/net.alchim31.maven/scala-maven-plugin -->
+                <groupId>net.alchim31.maven</groupId>
+                <artifactId>scala-maven-plugin</artifactId>
+                <version>${scala-maven-plugin-version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>compile</goal>
+                            <goal>testCompile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
     </build>
 
