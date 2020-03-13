@@ -5,10 +5,10 @@ import org.apache.commons.lang3.StringUtils;
 
 /**
  * 取自 Apache Commons 工具类 StringUtils 的 indexOfAny() 方法
+ * @see org.apache.commons.lang3.StringUtils#indexOfAny(CharSequence, char...)
  *
  * @author moqi
  * On 3/13/20 21:48
- * @see org.apache.commons.lang3.StringUtils#indexOfAny(CharSequence, char...)
  */
 @Slf4j
 public class A0103IndexOfAny {
