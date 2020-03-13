@@ -20,6 +20,7 @@ object A0104IndexOfAny {
 
 
     println("\nindexOfAny tests\n================")
+
     println(indexOfAny("zzabyycdxx", ""), "expected: []")
     println(indexOfAny("", "za"), "expected: []")
     println(indexOfAny("", ""), "expected: []")
@@ -32,6 +33,9 @@ object A0104IndexOfAny {
     println(indexedInput("zabycdxx"))
   }
 
+  /**
+   * Scala 实现的 firstIndexOfAny()
+   */
   def firstIndexOfAny(input: String, searchChars: Seq[Char]): Option[Int] = {
     def indexedInput = (0 until input.length).zip(input)
 
@@ -45,6 +49,9 @@ object A0104IndexOfAny {
       Some(result.head)
   }
 
+  /**
+   * 返回匹配项的一个缓求值列表
+   */
   def indexOfAny(input: String, searchChars: Seq[Char]): Seq[Int] = {
     def indexedInput = (0 until input.length).zip(input)
 

@@ -7,6 +7,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
+ * 词频统计的 Java8 实现
+ *
  * @author moqi
  * On 3/13/20 21:48
  */
