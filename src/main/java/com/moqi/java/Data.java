@@ -1,8 +1,6 @@
 package com.moqi.java;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author moqi
@@ -15,5 +13,24 @@ public class Data {
             "neal", "s", "stu", "j", "rich", "bob", "aiden", "j", "ethan", "liam",
             "mason", "noah", "lucas", "jacob", "jayden", "jack")
     );
+
+    public static final Set<String> NON_WORDS = new HashSet<String>() {{
+        add("the");
+        add("and");
+        add("of");
+        add("to");
+        add("a");
+        add("i");
+        add("it");
+        add("in");
+        add("or");
+        add("is");
+        add("d");
+        add("s");
+        add("as");
+        add("so");
+        add("but");
+        add("be");
+    }};
 
 }

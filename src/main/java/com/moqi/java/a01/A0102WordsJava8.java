@@ -2,9 +2,14 @@ package com.moqi.java.a01;
 
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import static com.moqi.java.Data.NON_WORDS;
 
 /**
  * 词频统计的 Java8 实现
@@ -14,25 +19,6 @@ import java.util.regex.Pattern;
  */
 @Slf4j
 public class A0102WordsJava8 {
-
-    private static final Set<String> NON_WORDS = new HashSet<String>() {{
-        add("the");
-        add("and");
-        add("of");
-        add("to");
-        add("a");
-        add("i");
-        add("it");
-        add("in");
-        add("or");
-        add("is");
-        add("d");
-        add("s");
-        add("as");
-        add("so");
-        add("but");
-        add("be");
-    }};
 
     public static void main(String[] args) {
         Map<String, Integer> map = wordFreq("hello hello world nike nike nike nike world world");

@@ -2,7 +2,7 @@
 
 * 参考书：[函数式编程思维](https://book.douban.com/subject/26587213/) 。
 
-* 函数式编程练习：大多数实现使用 Java、Groovy、Scala、Clojure。
+* 函数式编程练习：大多数实现使用 Java、Groovy、Scala、Clojure。 目前 Cursive 未配置正确或有 bug 导致 Clojure 无法运行。
 
 * 本项目使用 Maven 管理 Java 依赖。
 
