@@ -16,6 +16,7 @@ object A0202TheCompanyProcess {
     // END scala_process
     println("Process:" + result)
 
+    // Scala 实现并行化 Process 过程
     // BEGIN scala_process_parallel
     val parallelResult = name_list
       .par

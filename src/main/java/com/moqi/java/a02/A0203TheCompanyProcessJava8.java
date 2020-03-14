@@ -42,6 +42,7 @@ public class A0203TheCompanyProcessJava8 {
 
 
     /**
+     * Java8 实现并行化 Process 过程
      * java8_process_parallel
      */
     public String cleanNamesP(List<String> names) {
