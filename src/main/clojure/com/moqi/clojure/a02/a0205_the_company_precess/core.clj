@@ -1,6 +1,5 @@
 (ns com.moqi.clojure.a02.a0205_the_company_precess.core
-  (:require [clojure.string :as s])
-  )
+  (:require [clojure.string :as s]))
 
 ; BEGIN clj_process
 (defn process [list-of-employees]
@@ -17,6 +16,6 @@
        (reduce str)))
 ; END clj_process_thread
 
-;; Abcd,Moqi,Tom,Jack
-(println (process2 (list "abcd" "moqi" "tom" "jack")))
-;(println (process2 (data1/employee-list)))
+;; Smith,Moqi,Tom,Jack
+(def a_list (list "smith" "moqi" "tom" "jack"))
+(println (process2 a_list))
