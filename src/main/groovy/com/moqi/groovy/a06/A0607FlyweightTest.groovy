@@ -33,6 +33,7 @@ class AssignedComputer {
 }
 // END groovy_flyweight_defs
 
+// 生产 flyweight 计算机实例的单例工厂
 // BEGIN groovy_computer_factory
 class CompFactory {
     def types = [:]
@@ -57,6 +58,7 @@ class CompFactory {
 }
 // END groovy_computer_factory
 
+// 简化的单例工厂
 // BEGIN groovy_factory_singleton
 @Singleton(strict = false)
 class ComputerFactory {
@@ -77,6 +79,7 @@ class ComputerFactory {
 
 // 这里两个方法名需要加 test 前缀
 class FlyweightTest extends GroovyTestCase {
+    // 把共享内容记忆起来
     // BEGIN groovy_memoization_of_flyweights
     def computerOf = { type ->
         def of = [MacBookPro6_2: new Laptop(), SunTower: new Desktop()]
@@ -86,6 +89,7 @@ class FlyweightTest extends GroovyTestCase {
     def computerOfType = computerOf.memoize()
     // END groovy_memoization_of_flyweights
 
+    // 证明工厂返回的是标准品
     // BEGIN groovy_flyweight_test
     @Test
     void test_comp_factory() {
@@ -97,6 +101,7 @@ class FlyweightTest extends GroovyTestCase {
     }
     // END groovy_flyweight_test
 
+    // 两种实现方式的比较
     // BEGIN groovy_flyweight_demo
     @Test
     void test_flyweight_computers() {
