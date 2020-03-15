@@ -43,6 +43,8 @@
         <!-- scope 本地调试时注销 -->
         <scala.scope>compile</scala.scope>
         <scala-maven-plugin-version>4.3.1</scala-maven-plugin-version>
+        <!-- Scala Test -->
+        <scalatest.version>3.1.1</scalatest.version>
 
         <!-- clojure -->
         <clojure.version>1.10.1</clojure.version>
@@ -159,6 +161,14 @@
             <artifactId>scala-compiler</artifactId>
             <version>${scala.version}</version>
             <scope>${scala.scope}</scope>
+        </dependency>
+
+        <!-- Scala Test -->
+        <!-- https://mvnrepository.com/artifact/org.scalatest/scalatest -->
+        <dependency>
+            <groupId>org.scalatest</groupId>
+            <artifactId>scalatest_2.12</artifactId>
+            <version>${scalatest.version}</version>
         </dependency>
 
         <!-- Clojure -->
