@@ -23,6 +23,7 @@ public class A0213NumberClassifierFunctionalJava {
     }
     // END functional_java_filter
 
+    // Functional Java 提供的 foldLeft() 方法
     // BEGIN functional_java_fold
     public int aliquotSum(List<Integer> factors) {                // <3>
         return factors.foldLeft(fj.function.Integers.add, 0) - factors.last();
