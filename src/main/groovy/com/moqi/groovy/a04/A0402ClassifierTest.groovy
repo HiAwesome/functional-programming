@@ -12,11 +12,11 @@ class A0402ClassifierTest {
 
     @Test
     void classifies_correctly() {
-        Assert.assertTrue(Classifier.isPerfect(6))
-        Assert.assertTrue(Classifier.isPerfect(496))
-        Assert.assertTrue(Classifier.isPerfect(8128))
-        Assert.assertTrue(Classifier.isAbundant(24))
-        Assert.assertTrue(Classifier.isDeficient(7))
+        Assert.assertTrue(classifier.isPerfect(6))
+        Assert.assertTrue(classifier.isPerfect(496))
+        Assert.assertTrue(classifier.isPerfect(8128))
+        Assert.assertTrue(classifier.isAbundant(24))
+        Assert.assertTrue(classifier.isDeficient(7))
     }
 
     @Test
@@ -39,17 +39,17 @@ class A0402ClassifierTest {
         print "Non-optimized:              "
         start = System.currentTimeMillis()
         (1..TEST_NUMBER_MAX).each { n ->
-            if (Classifier.isPerfect(n)) print '!'
-            else if (Classifier.isAbundant(n)) print '+'
-            else if (Classifier.isDeficient(n)) print '-'
+            if (classifier.isPerfect(n)) print '!'
+            else if (classifier.isAbundant(n)) print '+'
+            else if (classifier.isDeficient(n)) print '-'
         }
         println "\n\t ${System.currentTimeMillis() - start} ms"
         print "Non-optimized (2nd):        "
         start = System.currentTimeMillis()
         (1..TEST_NUMBER_MAX).each { n ->
-            if (Classifier.isPerfect(n)) print '!'
-            else if (Classifier.isAbundant(n)) print '+'
-            else if (Classifier.isDeficient(n)) print '-'
+            if (classifier.isPerfect(n)) print '!'
+            else if (classifier.isAbundant(n)) print '+'
+            else if (classifier.isDeficient(n)) print '-'
         }
         println "\n\t ${System.currentTimeMillis() - start} ms"
 // END groovy_uncached_sum
@@ -97,34 +97,34 @@ class A0402ClassifierTest {
         print "Partially Memoized:         "
         start = System.currentTimeMillis()
         (1..TEST_NUMBER_MAX).each { n ->
-            if (ClassifierMemoizedSum.isPerfect(n)) print '!'
-            else if (ClassifierMemoizedSum.isAbundant(n)) print '+'
-            else if (ClassifierMemoizedSum.isDeficient(n)) print '-'
+            if (A0404ClassifierMemoizedSum.isPerfect(n)) print '!'
+            else if (A0404ClassifierMemoizedSum.isAbundant(n)) print '+'
+            else if (A0404ClassifierMemoizedSum.isDeficient(n)) print '-'
         }
         println "\n\t ${System.currentTimeMillis() - start} ms"
         print "Partially Memoized (2nd):   "
         start = System.currentTimeMillis()
         (1..TEST_NUMBER_MAX).each { n ->
-            if (ClassifierMemoizedSum.isPerfect(n)) print '!'
-            else if (ClassifierMemoizedSum.isAbundant(n)) print '+'
-            else if (ClassifierMemoizedSum.isDeficient(n)) print '-'
+            if (A0404ClassifierMemoizedSum.isPerfect(n)) print '!'
+            else if (A0404ClassifierMemoizedSum.isAbundant(n)) print '+'
+            else if (A0404ClassifierMemoizedSum.isDeficient(n)) print '-'
         }
         println "\n\t ${System.currentTimeMillis() - start} ms"
 
         print "Memoized:                   "
         start = System.currentTimeMillis()
         (1..TEST_NUMBER_MAX).each { n ->
-            if (ClassifierMemoized.isPerfect(n)) print '!'
-            else if (ClassifierMemoized.isAbundant(n)) print '+'
-            else if (ClassifierMemoized.isDeficient(n)) print '-'
+            if (A0403ClassifierMemoized.isPerfect(n)) print '!'
+            else if (A0403ClassifierMemoized.isAbundant(n)) print '+'
+            else if (A0403ClassifierMemoized.isDeficient(n)) print '-'
         }
         println "\n\t ${System.currentTimeMillis() - start} ms"
         print "Memoized(2nd)               "
         start = System.currentTimeMillis()
         (1..TEST_NUMBER_MAX).each { n ->
-            if (ClassifierMemoized.isPerfect(n)) print '!'
-            else if (ClassifierMemoized.isAbundant(n)) print '+'
-            else if (ClassifierMemoized.isDeficient(n)) print '-'
+            if (A0403ClassifierMemoized.isPerfect(n)) print '!'
+            else if (A0403ClassifierMemoized.isAbundant(n)) print '+'
+            else if (A0403ClassifierMemoized.isDeficient(n)) print '-'
         }
         println "\n\t ${System.currentTimeMillis() - start} ms"
 // END groovy_partially_memoized
