@@ -11,6 +11,7 @@ class A0215NumberClassifier {
     }
     // END groovy_filter
 
+    // Groovy 版的 reduce 叫做 inject
     // BEGIN groovy_reduce
     static def sumFactors(number) {
         factors(number).inject(0, { i, j -> i + j })
