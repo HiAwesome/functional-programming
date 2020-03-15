@@ -36,18 +36,18 @@ public class A0212NumberClassifierJava8 {
     }
 
 }
-// END number_classifier_java8
+	// END number_classifier_java8
 
-// BEGIN java8_filter_fast
-//    public static List fastFactorsOf(int number) {
-//        List<Integer> factors = range(1, (int) (sqrt(number) + 1))
-//                .filter(potential -> number % potential == 0)
-//                .boxed()
-//                .collect(toList());
-//        List factorsAboveSqrt = factors
-//                .stream()
-//                .map(e -> number / e).collect(toList());
-//        factors.addAll(factorsAboveSqrt);
-//        return factors.stream().distinct().collect(toList());
-//    }
-// END java8_filter_fast
+	// BEGIN java8_filter_fast
+	//    public static List fastFactorsOf(int number) {
+	//        List<Integer> factors = range(1, (int) (sqrt(number) + 1))
+	//                .filter(potential -> number % potential == 0)
+	//                .boxed()
+	//                .collect(toList());
+	//        List factorsAboveSqrt = factors
+	//                .stream()
+	//                .map(e -> number / e).collect(toList());
+	//        factors.addAll(factorsAboveSqrt);
+	//        return factors.stream().distinct().collect(toList());
+	//    }
+	// END java8_filter_fast

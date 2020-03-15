@@ -58,4 +58,3 @@ public class A0210ImpNumberClassifierSimple {
         return aliquotSum() < _number;
     }
 }
-// END imp_classifier
