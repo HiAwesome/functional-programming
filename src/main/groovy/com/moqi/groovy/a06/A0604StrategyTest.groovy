@@ -27,17 +27,19 @@ class CalcAdds implements Calc {
 class StrategyTest {
     def listOfStrategies = [new CalcMulti(), new CalcAdds()]
 
+    // 测试积的计算策略
     @Test
-    public void product_verifier() {
+    void product_verifier() {
         listOfStrategies.each { s ->
             GroovyTestCase.assertEquals(10, s.product(5, 2))
         }
     }
 	// END groovy_strategy_test  
 
+    // 简洁地表达和测试幂的不同计算策略
 	// BEGIN groovy_functional_strategy
     @Test
-    public void exp_verifier() {
+    void exp_verifier() {
         def listOfExp = [
                 { i, j -> Math.pow(i, j) },
                 { i, j ->
