@@ -4,6 +4,7 @@
 (defn in [score low high]
   (and (number? score) (<= low score high)))
 
+; 成绩分等的 Clojure 实现
 (defn letter-grade [score]
   (cond
     (in score 90 100) "A"
@@ -13,6 +14,7 @@
     (in score 0 60)   "F"
     (re-find #"[ABCDFabcdf]" score) (.toUpperCase score)))
 
+; 测试 letter-grade 方法
 (deftest numeric-letter-grades
          (dorun (map #(is (= "A" (letter-grade %))) (range 90 100)))
          (dorun (map #(is (= "B" (letter-grade %))) (range 80 89)))
