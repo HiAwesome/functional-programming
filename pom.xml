@@ -49,8 +49,18 @@
 
         <!-- functionaljava -->
         <functionaljava.version>4.8.1</functionaljava.version>
+
+        <!-- totallylazy -->
+        <totallylazy.version>1.86</totallylazy.version>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>repo.bodar.com</id>
+            <name>为 totallylazy 所设定的 Maven 远程仓库</name>
+            <url>http://repo.bodar.com</url>
+        </repository>
+    </repositories>
 
     <dependencies>
         <!-- spock testing framework start -->
@@ -163,6 +173,13 @@
             <groupId>org.functionaljava</groupId>
             <artifactId>functionaljava</artifactId>
             <version>${functionaljava.version}</version>
+        </dependency>
+
+        <!-- source: https://totallylazy.com/ -->
+        <dependency>
+            <groupId>com.googlecode.totallylazy</groupId>
+            <artifactId>totallylazy</artifactId>
+            <version>${totallylazy.version}</version>
         </dependency>
 
     </dependencies>
