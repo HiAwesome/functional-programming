@@ -1,14 +1,14 @@
 package com.moqi.groovy.a04
 
-class A0413LazyList {
+class A0415LazyList {
     private head, tail
 
-    A0413LazyList(head, tail) {
+    A0415LazyList(head, tail) {
         this.head = head;
         this.tail = tail
     }
 
-    def A0413LazyList getTail() { tail ? tail() : null }
+    def A0415LazyList getTail() { tail ? tail() : null }
 
     def List getHead(n) {
         def harvestedValues = [];
@@ -20,7 +20,7 @@ class A0413LazyList {
         harvestedValues
     }
 
-    def A0413LazyList filter(Closure p) {
+    def A0415LazyList filter(Closure p) {
         if (p(head))
             p.owner.prepend(head, { getTail().filter(p) })
         else

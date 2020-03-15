@@ -1,9 +1,9 @@
-import com.moqi.groovy.a04.A0412NumberClassifier
-import com.moqi.groovy.a04.A0413LazyList
+import com.moqi.groovy.a04.A0415LazyList
+import com.moqi.groovy.a04.A0416NumberClassifier
 import com.moqi.groovy.a04.NumberClassification
 import org.junit.Test
 
-import static com.moqi.groovy.a04.A0412NumberClassifier.nextPerfectNumberAfter
+import static com.moqi.groovy.a04.A0416NumberClassifier.nextPerfectNumberAfter
 import static junit.framework.Assert.assertEquals
 import static org.junit.Assert.assertTrue
 
@@ -12,7 +12,7 @@ import static org.junit.Assert.assertTrue
  */
 class A0414AllAboutListsTest {
 // BEGIN groovy_lazy_list
-    def prepend(val, closure) { new A0413LazyList(val, closure) }
+    def prepend(val, closure) { new A0415LazyList(val, closure) }
 
     def integers(n) { prepend(n, { integers(n + 1) }) }
 
@@ -49,14 +49,14 @@ class A0414AllAboutListsTest {
     public void terse_classify() {
         [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 13, 14, 15,
          16, 17, 19, 21, 22, 23, 25, 26, 27].each { i ->
-            assertTrue(A0412NumberClassifier.classify(i) == NumberClassification.DEFICIENT)
+            assertTrue(A0416NumberClassifier.classify(i) == NumberClassification.DEFICIENT)
         }
         [
                 12, 18, 20, 24, 30, 36, 40, 42, 48, 54, 56, 60, 66, 70, 72, 78, 80, 84, 88, 90, 96, 100, 102].each { i ->
-            assertTrue(A0412NumberClassifier.classify(i) == NumberClassification.ABUNDANT)
+            assertTrue(A0416NumberClassifier.classify(i) == NumberClassification.ABUNDANT)
         }
         [6, 28, 496].each { i ->
-            assertTrue(A0412NumberClassifier.classify(i) == NumberClassification.PERFECT)
+            assertTrue(A0416NumberClassifier.classify(i) == NumberClassification.PERFECT)
         }
     }
 }
